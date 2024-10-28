@@ -9,10 +9,8 @@ const relogio = setInterval(function time(){
     let sec = dateToday.getSeconds();
 
     if(hr<10) hr = '0' + hr;
-    if(min<10) hr = '0' + min;
-    if(sec<10) hr = '0' + sec;
-    
-    
+    if(min<10) min = '0' + min;
+    if(sec<10) sec = '0' + sec;
     
     horas.textContent = hr;
     minutos.textContent = min;
