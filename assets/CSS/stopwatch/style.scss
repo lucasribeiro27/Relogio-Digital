@@ -5,10 +5,90 @@
     font-family: 'Courier New', Courier, monospace;
 }
 body{
+    background: linear-gradient(180deg, #9f6bff,#6119cc);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    header {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul {
+            width: 80vw;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 3vw;
+            li{
+                text-decoration: none;
+                list-style: none;
+            }
+            a {
+              color: white;
+              text-decoration: none;
+            }
+          }
+    }
+}
+
+main{
     display: flex;
     align-items: center;
-    height: 100vh;
     justify-content: center;
+    height: 80vh;
     width: 100vw;
-    background: linear-gradient(180deg, #9f6bff,#6119cc);
+}
+
+#stopwatch{
+    padding: 2rem;
+    background-color: #262626;
+    border-radius: 1vw;
+}
+#time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 30px;
+    height: 250px;
+    width: 250px;
+    border: 3px solid #9f6bff;
+    border-radius: 100vw;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding: 4rem;
+}
+#actions{
+    display: flex;
+    gap: 0.5rem;
+}
+#actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #e0e7ff;
+    color: #262626;
+    cursor: pointer;
+    transition: background-color .2s ease-in;
+}
+#actions button:hover {
+    background-color: #c4b5fd;
+}
+
+#marks-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    color: #ffffff;
+}
+#marks-list p:first-child {
+    margin-top: 1.5rem;
 }
