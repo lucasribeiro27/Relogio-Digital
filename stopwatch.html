@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/CSS/stopwatch/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">elogio</a></li>
+            <li><a href="./stopwatch.html">Stopwatch</a></li>
+        </ul>
+        
+    </nav>
+    <main>
+        <div id="stopwatch">
+            <h2 id="time">00:00:00</h2>
+            <div id="actions">
+              <button id="reset">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="power" action="start">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button id="mark">
+                <i class="fa-solid fa-flag"></i>
+              </button>
+            </div>
+            <div id="marks-list"></div>
+          </div>
+    </main>
+  </body>
+</html>
