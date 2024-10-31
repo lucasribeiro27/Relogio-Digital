@@ -6,11 +6,13 @@
 }
 
 body {
-  background: linear-gradient(180deg, #9f6bff, #6119cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(180deg, #9f6bff, #6119cc);
 }
 body header {
   height: 15vh;
@@ -42,23 +44,26 @@ main {
 }
 
 #stopwatch {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
   background-color: #262626;
+  padding: 2rem;
   border-radius: 1vw;
 }
 
-#time {
+#timer {
+  background-color: #262626;
+  height: 250px;
+  width: 250px;
+  border: 3px solid #9f6bff;
+  margin-bottom: 1.5rem;
+  border-radius: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   font-size: 30px;
-  height: 250px;
-  width: 250px;
-  border: 3px solid #9f6bff;
-  border-radius: 100vw;
   color: #ffffff;
-  margin-bottom: 1.5rem;
   padding: 4rem;
 }
 

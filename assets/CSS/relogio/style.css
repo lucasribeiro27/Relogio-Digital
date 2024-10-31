@@ -12,6 +12,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+body header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header ul {
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3vw;
+}
+body header ul li {
+  text-decoration: none;
+  list-style: none;
+}
+body header ul a {
+  color: white;
+  text-decoration: none;
 }
 
 .relogio {

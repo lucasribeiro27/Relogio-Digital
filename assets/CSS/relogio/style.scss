@@ -12,6 +12,27 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    header {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul {
+            width: 80vw;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 3vw;
+            li{
+                text-decoration: none;
+                list-style: none;
+            }
+            a {
+              color: white;
+              text-decoration: none;
+            }
+          }
+    }
 }
 .relogio{
     display: flex;
