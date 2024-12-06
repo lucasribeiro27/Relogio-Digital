@@ -153,4 +153,16 @@ body header ul a {
 
 #wind_icon {
   color: #7462c7;
+}
+
+#alert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#alert img {
+  width: 200px;
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -40,6 +40,7 @@ body {
   border-radius: 20px;
   padding: 18px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  
 }
 #search {
   display: flex;
@@ -134,4 +135,14 @@ color: #b41b1bc5;
   color: #0ea5e9;
 }#wind_icon{
   color: #7462c7;
+}
+#alert{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+#alert img{
+  width: 200px;
+  margin-top: 20px;
 }
