@@ -1,10 +1,12 @@
 document.querySelector("#search").addEventListener("submit", async (event) => {
   event.preventDefault();
   const cityName = document.querySelector("#city_name").value;
-//   if (!cityName) {
-//     return showAlert
-//     //("Você precisa digitar uma cidade! Ex: Cabo Frio-RJ");
-//   }
+  if (!cityName) {
+    document.querySelector("#weather").classList.remove("show");
+    showAlert("Você precisa digitar uma cidade! Ex: Cabo Frio-RJ");
+    return;
+  }
+
   const apiKey = `9305ac8c8f4ecaa2c577f79c1c9db778`;
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(
     cityName
@@ -26,10 +28,12 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
       humidity: json.main.humidity,
     });
   } else {
+    document.querySelector("#weather").classList.remove("show");
     showAlert(
-        `Não foi possível localizar!
+      `Não foi possível localizar!
         <img src="IMG/undraw_location_search_re_ttoj.svg"/>
-        `);
+        `
+    );
   }
 });
 
@@ -38,15 +42,31 @@ function showInfo(json) {
 
   document.querySelector("#weather").classList.add("show");
 
-  document.querySelector('#title').innerHTML=`${json.city},${json.country}`;
-  document.querySelector('#temp_value').innerHTML=`${json.temp.toFixed(1).toString().replace('.',',')}<sup>C°<sup>`;
-  document.querySelector('#temp_description').innerHTML=`${json.description}`;
-  document.querySelector('#temp_img').setAttribute('src',`https://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
-  
-  document.querySelector('#temp_max').innerHTML=`${json.tempMax.toFixed(1).toString().replace('.',',')}<sup>C°<sup>`;
-  document.querySelector('#temp_min').innerHTML=`${json.tempMin.toFixed(1).toString().replace('.',',')}<sup>C°<sup>`;
-  document.querySelector('#humidity').innerHTML=`${json.humidity}%`;
-  document.querySelector('#wind').innerHTML=`${json.windSpeed.toFixed(1)} km/h`;
+  document.querySelector("#title").innerHTML = `${json.city},${json.country}`;
+  document.querySelector("#temp_value").innerHTML = `${json.temp
+    .toFixed(1)
+    .toString()
+    .replace(".", ",")}<sup>C°<sup>`;
+  document.querySelector("#temp_description").innerHTML = `${json.description}`;
+  document
+    .querySelector("#temp_img")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${json.tempIcon}@2x.png`
+    );
+
+  document.querySelector("#temp_max").innerHTML = `${json.tempMax
+    .toFixed(1)
+    .toString()
+    .replace(".", ",")}<sup>C°<sup>`;
+  document.querySelector("#temp_min").innerHTML = `${json.tempMin
+    .toFixed(1)
+    .toString()
+    .replace(".", ",")}<sup>C°<sup>`;
+  document.querySelector("#humidity").innerHTML = `${json.humidity}%`;
+  document.querySelector("#wind").innerHTML = `${json.windSpeed.toFixed(
+    1
+  )} km/h`;
 }
 
 function showAlert(msg) {
