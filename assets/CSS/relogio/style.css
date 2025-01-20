@@ -23,7 +23,7 @@ body header ul {
   width: 80vw;
   display: flex;
   justify-content: space-evenly;
-  font-size: 3vw;
+  font-size: 50px;
 }
 body header ul li {
   text-decoration: none;
@@ -34,6 +34,15 @@ body header ul a {
   text-decoration: none;
 }
 
+@media (min-width: 201px) and (max-width: 500px) {
+  body header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 360px;
+    font-size: 20px;
+  }
+}
 main {
   display: flex;
   align-items: center;
@@ -52,10 +61,11 @@ main {
   border-radius: 3px;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
 }
-@media (max-width: 800px) {
+@media (min-width: 201px) and (max-width: 500px) {
   .relogio {
+    width: 200px;
+    height: 500px;
     flex-direction: column;
-    height: 70vh;
   }
 }
 
@@ -72,18 +82,23 @@ main {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
   letter-spacing: 3px;
 }
-@media (max-width: 800px) {
+@media (min-width: 201px) and (max-width: 500px) {
   .relogio div {
-    width: 35vw;
-    height: 20vh;
+    width: 48vw;
+    height: 24vh;
   }
 }
 
 .relogio span {
   font-weight: bolder;
-  font-size: 60px;
+  font-size: 100px;
+}
+@media (min-width: 201px) and (max-width: 500px) {
+  .relogio span {
+    font-size: 80px;
+  }
 }
 
 .relogio span.tempo {
-  font-size: 10px;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */

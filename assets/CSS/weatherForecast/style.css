@@ -35,6 +35,19 @@ body header ul a {
   text-decoration: none;
 }
 
+@media (min-width: 201px) and (max-width: 500px) {
+  body header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 360px;
+    font-size: 20px;
+  }
+}
+main {
+  height: 80vh;
+}
+
 #container {
   background-color: #f0f8ff;
   border-radius: 20px;

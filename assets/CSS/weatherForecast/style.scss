@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(#3b82f6, #4a7dff);
+  
   header {
     height: 15vh;
     display: flex;
@@ -34,6 +35,22 @@ body {
       }
     }
   }
+}
+@media (min-width: 201px) and (max-width: 500px) {
+  body {    
+    header {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 360px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+main{
+  height: 80vh;
 }
 #container {
   background-color: #f0f8ff;

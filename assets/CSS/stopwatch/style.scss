@@ -33,6 +33,24 @@ body {
     }
   }
 }
+@media (min-width: 201px) and (max-width: 500px) {
+body{
+  nav{
+    width: 380px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul{
+      width: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 18px;
+    }
+  }
+}
+}
 
 main {
   display: flex;
